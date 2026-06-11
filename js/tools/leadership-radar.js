@@ -273,7 +273,7 @@ function radarSVG(scores, overlayScores) {
       return getPoint(i, v, R);
     });
     overlayPath = `<path d="${overlayPoints.map((p, i) => `${i === 0 ? 'M' : 'L'} ${p.x} ${p.y}`).join(' ')} Z"
-      fill="rgba(63,182,168,0.06)" stroke="rgba(63,182,168,0.25)" stroke-width="1.5" stroke-dasharray="4 3"/>`;
+      fill="rgba(212,130,26,0.06)" stroke="rgba(212,130,26,0.25)" stroke-width="1.5" stroke-dasharray="4 3"/>`;
   }
 
   // Dot markers on data polygon
@@ -290,7 +290,7 @@ function radarSVG(scores, overlayScores) {
       ${axisLabels}
       ${overlayPath}
       ${filledAny ? `
-        <path d="${dataPath}" fill="rgba(63,182,168,0.15)" stroke="var(--accent)" stroke-width="2" stroke-linejoin="round"/>
+        <path d="${dataPath}" fill="rgba(212,130,26,0.15)" stroke="var(--accent)" stroke-width="2" stroke-linejoin="round"/>
         ${dataDots}
       ` : ''}
       <!-- Axis scale labels -->

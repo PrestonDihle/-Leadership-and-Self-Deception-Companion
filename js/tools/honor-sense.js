@@ -79,8 +79,8 @@ export function renderHonorSense(container) {
 
       <div style="display:flex;gap:16px;flex-wrap:wrap;margin-bottom:16px;font-size:13px;color:var(--text-3)">
         <span>Days logged: <strong style="color:var(--text-1)">${daysLogged}</strong></span>
-        <span>Honored: <strong style="color:var(--accent)">${honored}</strong></span>
-        <span>Completion: ${daysLogged < 7 ? `${daysLogged}/7 days to mark complete` : '<span style="color:var(--accent)">✓ 7+ days</span>'}</span>
+        <span>Honored: <strong style="color:var(--out-box)">${honored}</strong></span>
+        <span>Completion: ${daysLogged < 7 ? `${daysLogged}/7 days to mark complete` : '<span style="color:var(--out-box)">✓ 7+ days</span>'}</span>
       </div>
 
       <div class="calendar-wrap">
@@ -88,7 +88,7 @@ export function renderHonorSense(container) {
       </div>
 
       <div class="calendar-legend">
-        <span><span class="legend-dot" style="background:var(--accent)"></span>Honored</span>
+        <span><span class="legend-dot" style="background:var(--out-box)"></span>Honored</span>
         <span><span class="legend-dot" style="background:var(--in-box);opacity:.5"></span>Didn't act</span>
         <span><span class="legend-dot" style="background:var(--bg-surface3);border:1px solid var(--border)"></span>No entry</span>
       </div>
@@ -202,11 +202,11 @@ function calendarSVG(entries) {
       let fill = 'var(--bg-surface3)';
       let stroke = 'var(--border)';
       if (entry?.sense?.trim()) {
-        if (entry.honored === true) fill = 'var(--accent)';
+        if (entry.honored === true) fill = 'var(--out-box)';
         else if (entry.honored === false) fill = 'rgba(194,87,90,0.55)';
         else fill = 'var(--warn)';
       }
-      if (isToday) stroke = 'var(--accent)';
+      if (isToday) stroke = 'var(--out-box)';
 
       cells += `
         <rect class="cal-day" data-date="${key}"

@@ -21,16 +21,16 @@
   --text-2: #9AA4B2;
   --text-3: #5E6B7C;
 
-  /* Accent (teal-green, interactive, progress) */
-  --accent:     #3FB6A8;
-  --accent-dim: rgba(63,182,168,0.14);
-  --accent-hi:  #4ECFC0;
-  --accent-lo:  #2A8880;
+  /* Accent (warm amber, matching book cover banner) */
+  --accent:     #D4821A;
+  --accent-dim: rgba(212,130,26,0.14);
+  --accent-hi:  #E8941F;
+  --accent-lo:  #A86410;
 
   /* Semantic pair — in-box / out-of-box */
   --in-box:     #C2575A;
   --in-box-dim: rgba(194,87,90,0.14);
-  --out-box:    #3FB6A8;   /* = accent */
+  --out-box:    #3FB6A8;
   --out-box-dim:rgba(63,182,168,0.14);
 
   /* Caution/neutral */
@@ -560,7 +560,7 @@ input[type="range"]:focus-visible::-webkit-slider-thumb {
 .lens-bar-fill {
   position: absolute;
   right: 0; top: 0; bottom: 0;
-  background: var(--accent);
+  background: var(--out-box);
   border-radius: var(--r-full);
   transition: width var(--t-med);
 }
